@@ -1,0 +1,18 @@
+<?php
+declare(strict_types = 1);
+
+/** @var array $data */
+?>
+
+<?php if(!empty($data)): ?>
+    <table class="table">
+        <tbody>
+        <?php foreach($data as $key => $value): ?>
+            <tr>
+                <td><?= $this->escapeHtml($key) ?></td>
+                <td><?= $this->escapeHtml($value) ?></td>
+            </tr>
+        <?php endforeach ?>
+        </tbody>
+    </table>
+<?php endif ?>

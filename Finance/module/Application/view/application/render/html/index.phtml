@@ -1,0 +1,18 @@
+<?php
+declare(strict_types = 1);
+
+/** @var \Application\Certificate\BaseCertificate $certificate */
+?>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="<?= $this->url('home') ?>">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">HTML representation</li>
+    </ol>
+</nav>
+
+<div class="row">
+    <div class="col-md-12">
+        <?= $certificate->displayAsHtml() ?>
+    </div>
+</div>

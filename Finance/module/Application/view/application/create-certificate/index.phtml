@@ -1,0 +1,40 @@
+<?php
+declare(strict_types = 1);
+
+use \Zend\Form\Element;
+
+/** @var \Application\Form\CreateCertificateForm $form */
+/** @var string $error */
+$form->setAttribute('method', 'post');
+$form->setAttribute('action', $this->url('create'));
+?>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="<?= $this->url('home') ?>">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create new certificate</li>
+    </ol>
+</nav>
+
+<?php if(!empty($error)): ?>
+    <div class="alert alert-danger" role="alert"><?= $error ?></div>
+<?php endif ?>
+
+<div class="row">
+    <div class="col-md-12">
+        <?= $this->form()->openTag($form) ?>
+
+        <?php foreach ($form->getElements() as $element): ?>
+            <div class="form-group">
+                <?php if(!($element instanceof Element\Submit)): ?>
+                <?= $this->formLabel($element) ?>
+                <? endif ?>
+
+                <?= $this->formElement($element) ?>
+                <?= $this->formElementErrors($element) ?>
+            </div>
+        <?php endforeach ?>
+
+        <?= $this->form()->closeTag() ?>
+    </div>
+</div>

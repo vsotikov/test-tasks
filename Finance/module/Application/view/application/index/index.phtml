@@ -1,0 +1,84 @@
+<?php
+declare(strict_types = 1);
+
+/** @var \Application\Certificate\BaseCertificate $certificate */
+/** @var \Application\Document\Document $document */
+/** @var int[] $priceHistoryCounts */
+?>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+    </ol>
+</nav>
+
+<div class="row">
+
+    <div class="col-md-12">
+        <table class="table table-hover table-striped table-light">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>ISIN</th>
+                <th>Trading Market</th>
+                <th>Issuer</th>
+                <th>Issuing Price</th>
+                <th>Current Price</th>
+                <th>Documents</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php if(empty($certificates)): ?>
+                <tr>
+                    <td colspan="9" align="center">No entries</td>
+                </tr>
+            <?php else: ?>
+                <?php foreach ($certificates as $certificate): ?>
+                <?php
+                    $model = $certificate->getModel();
+                ?>
+                <tr>
+                    <td><?= $model->getId() ?></td>
+                    <td><?= $certificate->getDisplayType() ?></td>
+                    <td><?= $model->getIsin() ?></td>
+                    <td><?= $this->escapeHtml($model->getTradingMarket()) ?></td>
+                    <td><?= $this->escapeHtml($model->getIssuer()) ?></td>
+                    <td><?= $certificate->getDisplayPrice('issuing') ?></td>
+                    <td><?= $certificate->getDisplayPrice('current') ?></td>
+                    <td>
+                        <?php foreach($documents[$model->getId()] ?? [] as $document): ?>
+                            <a href="<?= $document->getModel()->getLink() ?>" target="_blank">
+                                [<?= $document->getDisplayFormat() ?>] <?= $document->getDisplayType() ?>: <?= $this->escapeHtml($document->getModel()->getTitle()) ?>
+                            </a><br>
+                        <?php endforeach ?>
+                    </td>
+                    <td align="right">
+                        <div class="btn-group-vertical btn-group-sm">
+                            <?php if(!empty($priceHistoryCounts[$model->getId()])): ?>
+                                <a href="<?= $this->url('price-history', ['id' => $model->getId()]) ?>" class="btn btn-info">Price History</a>
+                            <?php endif ?>
+
+                            <a href="<?= $this->url('render/html', ['id' => $model->getId()]) ?>" class="btn btn-primary">HTML</a>
+                            <a href="<?= $this->url('render/xml', ['id' => $model->getId()]) ?>" class="btn btn-warning">XML</a>
+                            <a href="<?= $this->url('render/xml-original', ['id' => $model->getId()]) ?>" class="btn btn-dark">XML Original</a>
+                            <a onclick="return confirm('Are you sure?');" href="<?= $this->url('delete', ['id' => $model->getId()]) ?>" class="btn btn-danger">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+                <?php endforeach ?>
+            <?php endif ?>
+
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="9" align="right">
+                    <a href="<?= $this->url('create') ?>" class="btn btn-success">Add</a>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</div>
