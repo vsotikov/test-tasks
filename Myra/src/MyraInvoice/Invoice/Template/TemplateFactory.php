@@ -10,8 +10,8 @@ use Psr\Container\ContainerInterface;
  * TemplateFactory
  *
  * @package App\MyraInvoice\Invoice\Template
- * @author Vitali Sotsikau <vitali.sotsikau@check24.de>
- * @copyright CHECK24 GmbH
+ * @author Vitali Sotsikau <vsotikov@gmail.com>
+ * @copyright
  */
 class TemplateFactory
 {

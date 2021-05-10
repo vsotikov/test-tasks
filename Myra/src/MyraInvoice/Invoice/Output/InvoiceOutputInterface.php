@@ -9,8 +9,8 @@ use App\MyraInvoice\Invoice\Template\ResultInvoice;
  * InvoiceStorageInterface
  *
  * @package App\MyraInvoice\Invoice\Storage
- * @author Vitali Sotsikau <vitali.sotsikau@check24.de>
- * @copyright CHECK24 GmbH
+ * @author Vitali Sotsikau <vsotikov@gmail.com>
+ * @copyright
  */
 interface InvoiceOutputInterface
 {

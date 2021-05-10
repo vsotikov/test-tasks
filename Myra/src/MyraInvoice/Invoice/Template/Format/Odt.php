@@ -15,8 +15,8 @@ use Symfony\Component\HttpKernel\KernelInterface;
  * Odt
  *
  * @package App\MyraInvoice\Invoice\Template\Format
- * @author Vitali Sotsikau <vitali.sotsikau@check24.de>
- * @copyright CHECK24 GmbH
+ * @author Vitali Sotsikau <vsotikov@gmail.com>
+ * @copyright
  */
 class Odt implements InvoiceTemplateInterface
 {

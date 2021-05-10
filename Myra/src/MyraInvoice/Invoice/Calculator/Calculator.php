@@ -11,8 +11,8 @@ use App\MyraInvoice\Invoice\DataSource\InvoiceDataSourceInterface;
  * Calculator
  *
  * @package App\MyraInvoice\Invoice
- * @author Vitali Sotsikau <vitali.sotsikau@check24.de>
- * @copyright CHECK24 GmbH
+ * @author Vitali Sotsikau <vsotikov@gmail.com>
+ * @copyright
  */
 class Calculator
 {

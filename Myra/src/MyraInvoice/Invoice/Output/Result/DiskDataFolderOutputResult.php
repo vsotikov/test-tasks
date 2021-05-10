@@ -9,8 +9,8 @@ use App\MyraInvoice\Invoice\Output\OutputResultInterface;
  * DiskDataFolderResult
  *
  * @package App\MyraInvoice\Invoice\Storage\Result
- * @author Vitali Sotsikau <vitali.sotsikau@check24.de>
- * @copyright CHECK24 GmbH
+ * @author Vitali Sotsikau <vsotikov@gmail.com>
+ * @copyright
  */
 class DiskDataFolderOutputResult implements OutputResultInterface
 {

@@ -7,8 +7,8 @@ namespace App\MyraInvoice\Invoice\Output;
  * ResultInterface
  *
  * @package App\MyraInvoice\Invoice\Storage
- * @author Vitali Sotsikau <vitali.sotsikau@check24.de>
- * @copyright CHECK24 GmbH
+ * @author Vitali Sotsikau <vsotikov@gmail.com>
+ * @copyright
  */
 interface OutputResultInterface
 {

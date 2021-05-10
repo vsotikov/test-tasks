@@ -7,8 +7,8 @@ namespace App\MyraInvoice\Customer;
  * Customer
  *
  * @package App\MyraInvoice\Customer
- * @author Vitali Sotsikau <vitali.sotsikau@check24.de>
- * @copyright CHECK24 GmbH
+ * @author Vitali Sotsikau <vsotikov@gmail.com>
+ * @copyright
  */
 class Customer
 {

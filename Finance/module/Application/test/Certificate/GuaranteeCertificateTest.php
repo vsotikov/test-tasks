@@ -12,8 +12,8 @@ use Zend\View\Renderer\PhpRenderer;
  * GuaranteeCertificateTest
  *
  * @package Application\Certificate
- * @author Vitali Sotsikau <vitali.sotsikau@check24.de>
- * @copyright CHECK24 GmbH
+ * @author Vitali Sotsikau <vsotikov@gmail.com>
+ * @copyright
  */
 class GuaranteeCertificateTest extends TestCase
 {

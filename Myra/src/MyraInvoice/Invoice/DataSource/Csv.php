@@ -11,8 +11,8 @@ use Symfony\Component\HttpKernel\KernelInterface;
  * Csv
  *
  * @package App\MyraInvoice\Invoice\DataSource
- * @author Vitali Sotsikau <vitali.sotsikau@check24.de>
- * @copyright CHECK24 GmbH
+ * @author Vitali Sotsikau <vsotikov@gmail.com>
+ * @copyright
  */
 class Csv implements InvoiceDataSourceInterface
 {

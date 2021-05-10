@@ -23,15 +23,10 @@ Bitte beachten Sie dabei folgendes:
 - Bei Fragen oder Problemen zögern Sie nicht, mit ihrem Ansprechpartner zu sprechen. Ziel ist es, in 5 Stunden möglichst viel guten funktionierenden Code zu produzieren.
 - Achten Sie bei der Umsetzung darauf, dass Sie sich bei der Implementierung eines „Mini Frameworks&quot; bzw. bei der Schaffung von Strukturen **nicht verlaufen**. Ziel ist die Erstellung eines Blogs, auf möglichst hohem Niveau.
 
-Bei Fragen **zum Pflichtenheft** steht Ihnen ihr Ansprechpartner jederzeit zur Verfügung.
-
-
 
 Viel Erfolg und vielen Dank für Ihre Zeit und Ihr Interesse!
 
 
-
-CHECK24
 
 **1. Einführung**
 
@@ -243,17 +238,6 @@ Please note the following:
 • If you have questions or problems do not hesitate to talk to your partner. The aim is to produce as much good working code in 5 hours.
 
 • Ensure the implementation that you do not run with the implementation of a &quot;mini-frameworks&quot; or in the creation of structures. The aim is the creation of a blog, at the highest possible level.
-
-For questions about technical specifications please contact your contact person at any time.
-
-
-
-Good luck and thank you for your time and your interest!
-
-
-
-CHECK24
-
 
 
 The basic functions of a blog you are no doubt aware. On this basic understanding, we build on.
