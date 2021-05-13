@@ -5,10 +5,6 @@ require_once 'src/VacationDaysCalculator/Handlers/HandlerInterface.php';
 
 /**
  * HandlerTrait
- *
- * @package ${NAMESPACE}
- * @author Vitali Sotsikau <vitali.sotsikau@check24.de>
- * @copyright CHECK24 GmbH
  */
 trait HandlerTrait
 {
