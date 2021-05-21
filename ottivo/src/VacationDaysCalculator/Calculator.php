@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-require_once 'src/DataSource/Entity/Employer.php';
+require_once 'src/DataSource/Entity/Employee.php';
 require_once 'src/VacationDaysCalculator/Handlers/DefaultHandler.php';
 require_once 'src/VacationDaysCalculator/Handlers/SpecialContractHandler.php';
 require_once 'src/VacationDaysCalculator/Handlers/SeniorityHandler.php';
@@ -25,8 +25,8 @@ class Calculator
         ;
     }
 
-    public function calcDaysNumberForEmployer(Employer $employer, int $year): float
+    public function calcDaysNumberForEmployee(Employee $employee, int $year): float
     {
-        return $this->handler->handle($employer, $year);
+        return $this->handler->handle($employee, $year);
     }
 }

@@ -2,9 +2,9 @@
 declare(strict_types = 1);
 
 /**
- * Employer
+ * Employee
  */
-class Employer
+class Employee
 {
     private ?string $name = null;
     private ?DateTimeInterface $birthDate = null;
@@ -52,7 +52,7 @@ class Employer
 
     /**
      * @param string|null $name
-     * @return Employer
+     * @return Employee
      */
     public function setName(?string $name): self
     {
@@ -71,7 +71,7 @@ class Employer
 
     /**
      * @param DateTimeInterface|null $birthDate
-     * @return Employer
+     * @return Employee
      */
     public function setBirthDate(?DateTimeInterface $birthDate): self
     {
@@ -90,7 +90,7 @@ class Employer
 
     /**
      * @param DateTimeInterface|null $contractStart
-     * @return Employer
+     * @return Employee
      */
     public function setContractStart(?DateTimeInterface $contractStart): self
     {
@@ -109,7 +109,7 @@ class Employer
 
     /**
      * @param float|null $contractSpecialVacationDays
-     * @return Employer
+     * @return Employee
      */
     public function setContractSpecialVacationDays(?float $contractSpecialVacationDays): self
     {

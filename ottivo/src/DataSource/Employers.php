@@ -1,12 +1,12 @@
 <?php
 declare(strict_types = 1);
 
-require_once 'Entity/Employer.php';
+require_once 'Entity/Employee.php';
 
 /**
- * Employers datasource
+ * Employees datasource
  */
-class Employers extends ArrayObject
+class Employees extends ArrayObject
 {
     private const EMPLOYERS = [
         [
@@ -44,8 +44,8 @@ class Employers extends ArrayObject
     public function load()
     {
         $this->exchangeArray(array_map(
-            static function (array $employerData) {
-                return (new Employer())->setFromArray($employerData);
+            static function (array $employeeData) {
+                return (new Employee())->setFromArray($employeeData);
             },
             self::EMPLOYERS
         ));

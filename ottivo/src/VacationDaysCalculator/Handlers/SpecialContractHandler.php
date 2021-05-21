@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-require_once 'src/DataSource/Entity/Employer.php';
+require_once 'src/DataSource/Entity/Employee.php';
 require_once 'src/VacationDaysCalculator/Handlers/HandlerInterface.php';
 require_once 'src/VacationDaysCalculator/Handlers/HandlerTrait.php';
 
@@ -15,12 +15,12 @@ class SpecialContractHandler implements HandlerInterface
     /**
      * A special contract can overwrite the amount of minimum vacation days
      */
-    public function handle(Employer $employer, int $year, float $initialDays = 0): float
+    public function handle(Employee $employee, int $year, float $initialDays = 0): float
     {
-        $days = $employer->getContractSpecialVacationDays() ?? $initialDays;
+        $days = $employee->getContractSpecialVacationDays() ?? $initialDays;
 
         return $this->nextHandler
-            ? $this->nextHandler->handle($employer, $year, $days)
+            ? $this->nextHandler->handle($employee, $year, $days)
             : $days;
     }
 }
