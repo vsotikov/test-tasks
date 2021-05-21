@@ -1,6 +1,6 @@
-# Ottivo Employers Vacation Calculator
+# Ottivo Employees Vacation Calculator
 
-This command line tool calculates the amount of vacation days available to Ottivo employers annually. Calculation is based on defined rules, that are described in `VacationDaysCalculator/Handlers` directory. Employers information is stored in `DataSource/Employers` class.
+This command line tool calculates the amount of vacation days available to Ottivo employees annually. Calculation is based on defined rules, that are described in `VacationDaysCalculator/Handlers` directory. Employee's information is stored in `DataSource/Employees` class.
 
 To run the command you should navigate to program root directory (the directory with this file) and launch command in a following way
 

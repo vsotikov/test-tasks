@@ -8,7 +8,7 @@ require_once 'Entity/Employee.php';
  */
 class Employees extends ArrayObject
 {
-    private const EMPLOYERS = [
+    private const EMPLOYEES = [
         [
             'name' => 'Hans Mueller',
             'birth_date' => '1950-12-30',
@@ -47,7 +47,7 @@ class Employees extends ArrayObject
             static function (array $employeeData) {
                 return (new Employee())->setFromArray($employeeData);
             },
-            self::EMPLOYERS
+            self::EMPLOYEES
         ));
     }
 
