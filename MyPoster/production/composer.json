@@ -1,0 +1,8 @@
+{
+    "name": "mp/production",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": { "MP\\": "src/" }
+    }
+}
